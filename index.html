@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>background change</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Jim+Nightshade|Oswald|Ranga" rel="stylesheet">	
+	<style type="text/css">
+		
+		
+.box {
+    border: 3px solid #343444;
+    overflow: hidden;
+    color: white;
+    background: black;
+    font-size: 20px;
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+		
+	</style>
+	</head>
+<body>
+<select id="text">
+	<option value="Jim Nightshade">Jim Nightshade</option>
+	<option value="Baloo Bhaina">Baloo Bhaina</option>
+	<option value="Oswald">Oswald</option>
+	<option value="Ranga">Ranga</option>
+</select>
+
+<div class="container box">
+	<div class="row">
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var  T= $('#text').val();
+$('p').css('font-family',T);
+
+
+
+$('#text').change(function(){
+var T = $('#text').val();
+$('p').css('font-family',T);
+})
+	})
+</script>
+</body>
+</html>
